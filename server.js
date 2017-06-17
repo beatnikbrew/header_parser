@@ -13,7 +13,8 @@ app.get('/api', (req, res) => {
   resObject = {};
   resObject.IP = req.ip;
   resObject.Language = req.acceptsLanguages()[0];
-  resObject.OS = uaparser.os.toString();
+  let os = uaparser.parse(req.headers['user-agent']);
+  resObject.OS = os.os.toString();
   res.send(resObject);
 });
 
