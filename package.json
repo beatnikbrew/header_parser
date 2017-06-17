@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "ua-parser": "^0.3.5"
   },
   "devDependencies": {},
   "scripts": {
